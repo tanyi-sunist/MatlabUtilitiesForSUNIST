@@ -417,8 +417,8 @@ if strcmp(get(handles.pbConnect, 'String'),'Disconnect')
                         if size(y,1) < size(y,2)
                             y=y';
                         end
-                        if length(x) > length(y)
-                            x=x(1:length(y),1);
+                        if size(x,1) > size(y,1)
+                            x=x(1:size(y,1),1);
                         end
                         if isnumeric(y) && isnumeric(x)
                             if isempty(marker)
